@@ -6,7 +6,7 @@
 /*   By: gualvare <gualvare@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 12:15:10 by gualvare          #+#    #+#             */
-/*   Updated: 2024/06/26 12:16:23 by gualvare         ###   ########.fr       */
+/*   Updated: 2024/07/04 18:57:39 by gualvare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while ((i + j) < len && little[j] == big[i + j])
 		{
 			if (little[j + 1] == '\0')
-				return (&((char *)big)[i]);
+				return ((char *)big + i);
 			j++;
 		}
 		i++;

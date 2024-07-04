@@ -6,7 +6,7 @@
 /*   By: gualvare <gualvare@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/30 13:55:38 by gualvare          #+#    #+#             */
-/*   Updated: 2024/07/01 18:06:36 by gualvare         ###   ########.fr       */
+/*   Updated: 2024/07/04 19:30:03 by gualvare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,8 +17,11 @@ static int	num_counter(int n)
 
 	len = 1;
 	if (n < 0)
+	{
+		n *= -1;
 		len++;
-	while (n > 0)
+	}
+	while (n / 10)
 	{
 		n /= 10;
 		len++;
@@ -47,7 +50,7 @@ char	*ft_itoa(int n)
 		dest[0] = '0';
 	while (nb)
 	{
-		dest[len] = ((nb % 10) + '0');
+		dest[len] = (nb % 10) + '0';
 		nb /= 10;
 		len--;
 	}
