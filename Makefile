@@ -5,49 +5,54 @@
 #                                                     +:+ +:+         +:+      #
 #    By: gualvare <gualvare@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/07/01 17:12:53 by gualvare          #+#    #+#              #
-#    Updated: 2024/07/04 13:57:54 by gualvare         ###   ########.fr        #
+#    Created: 2024/07/05 14:05:44 by gualvare          #+#    #+#              #
+#    Updated: 2024/07/06 12:15:31 by gualvare         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
-INCLUDE = libft.h
 
-SRCS = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
-      ft_strdup.c ft_strlen.c ft_tolower.c ft_toupper.c ft_bzero.c \
-      ft_memcpy.c ft_strlcat.c ft_strncmp.c ft_memset.c ft_strlcpy.c \
-      ft_memmove.c ft_memcmp.c ft_strchr.c ft_strrchr.c ft_strnstr.c \
-      ft_memchr.c ft_atoi.c ft_calloc.c ft_substr.c ft_strjoin.c \
-	  ft_strtrim.c ft_itoa.c ft_strmapi.c ft_striteri.c \
-	  ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+NAME = libft.a
+
+
+SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
+	   ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c \
+	   ft_memmove.c ft_memset.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+	   ft_putstr_fd.c ft_split.c ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c \
+	   ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
+	   ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
+
 
 OBJS = $(SRCS:.c=.o)
 
-TEST_SRCS = testing_error.c testing_libft.c
-TEST_OBJS = $(TEST_SRCS:.c=.o)
+
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+
+AR = ar
+ARFLAGS = rcs
+
 
 all: $(NAME)
 
+
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
+	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
 
 
-%.o: %.c $(INCLUDE) Makefile
+%.o: %.c libft.h Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
+
 clean:
-	rm -f $(OBJS) $(TEST_OBJS)
+	rm -f $(OBJS)
+
 
 fclean: clean
 	rm -f $(NAME)
 
+
 re: fclean all
 
-test: $(TARGET) $(TEST_OBJS)
-	$(CC) $(CFLAGS) -o test $(TEST_OBJS) $(TARGET)
-	./test
 
-.PHONY:		all clean fclean re
+.PHONY: all clean fclean re
+
