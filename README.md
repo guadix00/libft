@@ -1,4 +1,4 @@
-# **¡LIBFT! Primer proyecto en 42 🚀🎉**
+# **¡LIBFT! Primer proyecto de 42 🚀🎉**
 ## Proyecto de Funciones de C
 
 Este es el primer proyecto de una serie donde implementamos y exploramos diversas funciones de la biblioteca estándar de C. En esta parte del proyecto, hemos llevado a cabo una serie de funciones esenciales que se utilizan comúnmente en el manejo de cadenas y memoria en C. A continuación, encontrarás una explicación detallada de cada función, incluyendo su propósito, la biblioteca de la que proviene, los errores que maneja (o no maneja), posibles usos y su valor de retorno.
