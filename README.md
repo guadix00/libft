@@ -6,15 +6,15 @@ Este es el primer proyecto de una serie donde implementamos y exploramos diversa
 
 | Función       | Biblioteca | Función       | Biblioteca | Función       | Biblioteca |
 | ------------- | ----------- | ------------- | ----------- | ------------- | ----------- |
-| [isalpha](isalpha.c)   | <ctype.h>  | [tolower](tolower.c) | <ctype.h>  | [memmove](memmove.c) | <string.h>  |
-| [isdigit](isdigit.c)   | <ctype.h>  | [strchr](strchr.c)  | <string.h>  | [strlcpy](strlcpy.c) | <string.h>  |
-| [isalnum](isalnum.c)   | <ctype.h>  | [strrchr](strrchr.c) | <string.h>  | [strlcat](strlcat.c) | <string.h>  |
-| [isascii](isascii.c)   | <ctype.h>  | [strncmp](strncmp.c) | <string.h>  | [atoi](atoi.c)     | <stdlib.h>  |
-| [isprint](isprint.c)   | <ctype.h>  | [memchr](memchr.c)  | <string.h>  | [calloc](calloc.c)  | <stdlib.h>  |
-| [strlen](strlen.c)    | <string.h> | [memcmp](memcmp.c)  | <string.h>  | [strdup](strdup.c)  | <string.h>  |
-| [memset](memset.c)    | <string.h> | [strnstr](strnstr.c)| <string.h>  |                 |             |
-| [bzero](bzero.c)      | <strings.h>| [toupper](toupper.c) | <ctype.h>  |                 |             |
-| [memcpy](memcpy.c)    | <string.h> | [tolower](tolower.c) | <ctype.h>  |                 |             |
+| [isalpha](ft_isalpha.c)   | <ctype.h>  | [tolower](ft_tolower.c) | <ctype.h>  | [memmove](ft_memmove.c) | <string.h>  |
+| [isdigit](ft_isdigit.c)   | <ctype.h>  | [strchr](ft_strchr.c)  | <string.h>  | [strlcpy](ft_strlcpy.c) | <string.h>  |
+| [isalnum](ft_isalnum.c)   | <ctype.h>  | [strrchr](ft_strrchr.c) | <string.h>  | [strlcat](ft_strlcat.c) | <string.h>  |
+| [isascii](ft_isascii.c)   | <ctype.h>  | [strncmp](ft_strncmp.c) | <string.h>  | [atoi](ft_atoi.c)     | <stdlib.h>  |
+| [isprint](ft_isprint.c)   | <ctype.h>  | [memchr](ft_memchr.c)  | <string.h>  | [calloc](ft_calloc.c)  | <stdlib.h>  |
+| [strlen](ft_strlen.c)    | <string.h> | [memcmp](ft_memcmp.c)  | <string.h>  | [strdup](ft_strdup.c)  | <string.h>  |
+| [memset](ft_memset.c)    | <string.h> | [strnstr](ft_strnstr.c)| <string.h>  |                 |             |
+| [bzero](ft_bzero.c)      | <strings.h>| [toupper](ft_toupper.c) | <ctype.h>  |                 |             |
+| [memcpy](ft_memcpy.c)    | <string.h> | [tolower](ft_tolower.c) | <ctype.h>  |                 |             |
 
 ## Funciones Adicionales Implementadas
 
